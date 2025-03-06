@@ -1,12 +1,15 @@
 import { useState } from "react";
-import { Oauth } from "./ExpoOauth.types";
+import { Session, User } from "./ExpoOauth.types";
 
 export const useOauth = () => {
-  const [oauth, setOauth] = useState<Oauth | null>({
-    id: "1",
-    name: "John Doe",
-    email: "john.doe@example.com",
-    avatar: "https://example.com/avatar.png",
+  const [oauth, setOauth] = useState<Session | null>({
+    user: {
+      id: "1",
+      name: "John Doe",
+      email: "john.doe@example.com",
+      image: "https://example.com/avatar.png",
+    },
+    expires: "2021-01-01T00:00:00.000Z",
   });
 
   return {

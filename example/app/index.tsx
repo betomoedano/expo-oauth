@@ -6,7 +6,7 @@ export default function Index() {
 
   return (
     <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Text>{oauth?.name}</Text>
+      <Text>{oauth?.user?.name}</Text>
     </View>
   );
 }
