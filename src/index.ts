@@ -2,3 +2,4 @@
 // and on native platforms to ExpoOauthModule.ts
 export * from  './ExpoOauth.types';
 export * from './hooks';
+export * from './context/Session';
