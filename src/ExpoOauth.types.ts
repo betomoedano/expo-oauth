@@ -34,3 +34,5 @@ export interface SessionProviderProps {
   basePath?: string
 }
 
+export type ProviderId = "Google" 
+
