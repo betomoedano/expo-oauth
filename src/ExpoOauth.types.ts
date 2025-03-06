@@ -1,5 +1,12 @@
 import type { StyleProp, ViewStyle } from 'react-native';
 
+export type Oauth = {
+  id: string;
+  name: string;
+  email: string;
+  avatar: string;
+};
+
 export type OnLoadEventPayload = {
   url: string;
 };

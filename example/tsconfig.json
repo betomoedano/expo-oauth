@@ -3,8 +3,18 @@
   "compilerOptions": {
     "strict": true,
     "paths": {
-      "expo-oauth": ["../src/index"],
-      "expo-oauth/*": ["../src/*"]
+      "@/*": [
+        "./*"
+      ],
+      "expo-oauth": [
+        "../src"
+      ]
     }
-  }
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    ".expo/types/**/*.ts",
+    "expo-env.d.ts"
+  ]
 }
