@@ -7,6 +7,7 @@ import { useEffect } from 'react';
 import 'react-native-reanimated';
 
 import { useColorScheme } from '@/components/useColorScheme';
+import { SessionProvider } from 'expo-oauth';
 
 export {
   // Catch any errors thrown by the Layout component.
@@ -49,11 +50,13 @@ function RootLayoutNav() {
   const colorScheme = useColorScheme();
 
   return (
+    <SessionProvider>
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
       <Stack>
         <Stack.Screen name="index" options={{ headerShown: false }} />
         <Stack.Screen name="modal" options={{ presentation: 'modal' }} />
       </Stack>
     </ThemeProvider>
+    </SessionProvider>
   );
 }

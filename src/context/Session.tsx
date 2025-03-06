@@ -21,4 +21,3 @@ export function useSession() {
   }
   return session;
 }
-
